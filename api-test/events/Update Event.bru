@@ -1,0 +1,28 @@
+meta {
+  name: Update Event
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{HTTP_URL}}/events/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Name": "Pratik Gaikwad",
+    "Description": "Test new",
+    "Location": "India"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  # Get all events
+}

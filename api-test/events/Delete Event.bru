@@ -1,0 +1,20 @@
+meta {
+  name: Delete Event
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{HTTP_URL}}/events/1
+  body: none
+  auth: none
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  # Get all events
+}
