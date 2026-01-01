@@ -1,0 +1,28 @@
+meta {
+  name: Add Event
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HTTP_URL}}/events
+  body: json
+  auth: basic
+}
+
+body:json {
+  {
+    "Name": "Pratik Gaikwad",
+    "Description": "Test 2",
+    "Location": "India"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  # Get all events
+}

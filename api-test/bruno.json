@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "learn-gin",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
