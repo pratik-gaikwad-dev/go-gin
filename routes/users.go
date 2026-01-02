@@ -41,10 +41,8 @@ func login(context *gin.Context) {
 
 	jwtToken, err := utils.GenerateToken(user.Email, user.ID)
 	if err != nil {
-		if err != nil {
-			context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not authenticate user.", "error": err.Error()})
-			return
-		}
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not authenticate user.", "error": err.Error()})
+		return
 	}
 
 	context.JSON(http.StatusOK, gin.H{"message": "Login Successful!", "token": jwtToken})
