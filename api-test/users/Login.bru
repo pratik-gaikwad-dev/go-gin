@@ -1,0 +1,23 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HTTP_URL}}/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "abc1@gmail.com",
+    "password": "1234"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

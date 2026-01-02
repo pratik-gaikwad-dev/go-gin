@@ -8,14 +8,12 @@ import (
 
 type Event struct {
 	ID          int64
-	Name        string
-	Description string
-	Location    string
+	Name        string `binding:"required"`
+	Description string `binding:"required"`
+	Location    string `binding:"required"`
 	DateTime    time.Time
-	UserID      int
+	UserID      int64
 }
-
-var events = []Event{}
 
 func (e *Event) Save() error {
 	query := `
