@@ -1,0 +1,20 @@
+meta {
+  name: Register
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{HTTP_URL}}/events/2/register
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiYzFAZ21haWwuY29tIiwiZXhwIjoxNzY3MzU5NTMzLCJ1c2VySWQiOjJ9.FH3ffjKxefxIrIaLGre7fHG-A8zULuOqMN6U_qXEcMI
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
